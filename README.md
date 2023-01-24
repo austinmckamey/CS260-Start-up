@@ -2,4 +2,4 @@
 
 # Yay I'm changing it from the terminal
 
-## This will definitely be a merge conflict
+## Merge conflicts aren't that hard, also this is how you make a smaller heading!!
