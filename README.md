@@ -1,4 +1,4 @@
-# Shared Journal? Game? Scheduling?
+# Shared Journal? Game(Tetris)? Scheduling?
 
 ## Design
 
