@@ -1,18 +1,15 @@
-# Shared Journal? Game(Tetris)? Scheduling?
+# Classic Snake
 
 ## Design
 
-Elevator Pitch
+Have you ever had the craving to play a game but don't want to boot up something complicated and stressful like Fortnite or League of Legends? Instead, you're in the mood for a classic, old-school game that challenges you, but also brings waves of nostalgia and enjoyment. This class game of snake is for you. With a secure login, you can store your personal high score as well as see how you compare with everyone else around the world. Compete against your friends or yourself to get a personal record, ot just play a casual game to relax.
 
-Picture
+<img width="300" height="300" alt="" src="https://user-images.githubusercontent.com/2433219/94984424-044e0a80-0509-11eb-903a-c114d5b6f061.png">
 
 Key features
 
 - Secure login over HTTPS
-- Ability to select the question to decide
-- Display of choices
-- Ability to select, and change, top three choices
-- Totals from all users displayed in realtime
-- Ability for a user to lock in their top three
-- Results are persistently stored
-- Ability for admin to create and delete questions
+- Ability to play game
+- Display of high scores according to username
+- Ability to restart game after losing
+- High scores are persistently stored
