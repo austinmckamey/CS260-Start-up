@@ -15,4 +15,7 @@ Key features
 - High scores are persistently stored
 
 IP Address of Server: 3.143.255.215
+
 Command to ssh: ssh -i [key_pair_file] ubuntu@3.143.255.215
+
+Domain: https://snake-eats-apple.click/
