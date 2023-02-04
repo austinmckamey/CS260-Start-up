@@ -19,3 +19,7 @@ IP Address of Server: 3.143.255.215
 Command to ssh: ssh -i [key_pair_file] ubuntu@3.143.255.215
 
 Domain: https://snake-eats-apple.click/
+
+<audio controls loop src="https://github.com/webprogramming260/.github/blob/main/profile/html/media/htmlAudio.mp3?raw=true"></audio>
+
+<video controls width="300"> <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" /></video>
