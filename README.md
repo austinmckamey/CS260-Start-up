@@ -27,3 +27,5 @@ Domain: https://snake-eats-apple.click/
 CSS stuff
 - animations!!
 - possibly use tailwind to make it easier
+
+Flex is the best, everything will be responsive to mobile view.
