@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../../styling/main.css">
   </head>
   <body>
-    <div class="login column">
-      <h1 class="header">Snake-eats-apple.</h1>
+    <div class="login flex-col">
+      <h1 class="header large-text gray">Snake-eats-apple.</h1>
 	  <div class="snake-animation1">
 		<div class="block"></div>
 		<div class="block"></div>
@@ -30,10 +30,16 @@
 		<div class="block"></div>
 		<div class="block"></div>
 	  </div>
-      <div class="text column">Login to play
-		<form method="get" action="../home/home.html">
-			<input type="text" id="name" placeholder="Your name here" />
-			<button type="submit">Login</button>
+	  <div class="apple position1"></div>
+	  <div class="apple position2"></div>
+      <div class="text gray flex-col">Login to play
+		<form method="get" action="../play/play.html">
+			<input class="username" type="text" id="name" placeholder="Your name here" />
+			<div class="big-block"></div>
+			<div class="flex-row">
+				<input type="password" id="password" placeholder="Password" />
+				<button type="submit">Login</button>
+			</div>
 		</form>
 	  </div>
     </div>

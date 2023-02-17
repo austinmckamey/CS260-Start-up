@@ -1,108 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+	<script>
+	function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/*loop through a collection of all HTML elements:*/
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		/*search for elements with a certain atrribute:*/
+		file = elmnt.getAttribute("include-html");
+		if (file) {
+			/*make an HTTP request using the attribute value as the file name:*/
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				/*remove the attribute, and call this function once more:*/
+				elmnt.removeAttribute("include-html");
+				includeHTML();
+			}
+			}      
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			/*exit the function:*/
+			return;
+		}
+		}
+	};
+	</script>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>Snake-eats-apple</title>
+    <link rel="stylesheet" href="../../styling/main.css">
   </head>
   <body>
     <header>
-      <h1>Simon<sup>&reg;</sup></h1>
-
-      <nav>
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="play.html">Play</a></li>
-          <li><a href="scores.html">Scores</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
-
-      <hr />
+		<div include-html="../home/home.html"></div>
     </header>
 
     <main>
-      <div class="players">
-        Player:
-        <span class="player-name">Mystery player</span>
-      </div>
-
-      <br />
-
-      <div>
-        <label for="count">Score</label>
-        <input type="text" id="count" value="--" readonly />
-      </div>
-
-      <br />
-
-      <div>
-        <button>Reset</button>
-      </div>
-
-      <br />
-
-      <div>
-        <table>
-          <tr>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <!-- SVG -- I don't know what this is but I'll leave it for now.
-                    M move <to x,y>
-                    Q quadratic curve <control point x,y> <to x,y>
-                -->
-                  <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M5,5 5,95 95,95 Q 95,5 5,5" fill="red" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M5,5 95,5 95,95 Q 5,95 5,5" fill="blue" />
-                </svg>
-              </button>
-            </td>
-            <td>
-              <button>
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 100 100"
-                  height="100"
-                  width="100"
-                >
-                  <path d="M95,5 5,5 5,95 Q 95,95 95,5" fill="yellow" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-        </table>
-      </div>
+		<div class="content flex-col">
+			<br />
+			<div class="large-text trim">Click somewhere to start</div>
+			<br />
+			<div class="game">
+				<!--put game here-->
+			</div>
+		</div>
     </main>
 
     <footer>
@@ -111,5 +57,9 @@
       <br />
       <a href="https://github.com/austinmckamey/simon">GitHub</a>
     </footer>
+
+	<script>
+		includeHTML();
+	</script>
   </body>
 </html>

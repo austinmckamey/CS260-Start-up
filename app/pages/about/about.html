@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script>
+	function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/*loop through a collection of all HTML elements:*/
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		/*search for elements with a certain atrribute:*/
+		file = elmnt.getAttribute("include-html");
+		if (file) {
+			/*make an HTTP request using the attribute value as the file name:*/
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				/*remove the attribute, and call this function once more:*/
+				elmnt.removeAttribute("include-html");
+				includeHTML();
+			}
+			}      
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			/*exit the function:*/
+			return;
+		}
+		}
+	};
+	</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake-eats-apple</title>
+    <link rel="stylesheet" href="../../styling/main.css">
+  </head>
+  <body>
+    <header>
+		<div include-html="../home/home.html"></div>
+    </header>
+
+	<main>
+		<div class="content flex-col">
+			<br />
+			<p class="text black">
+				Simon is a repetitive memory game where you follow the demonstrated
+				color sequence until you make a mistake. The longer the sequence you
+				repeat, the greater your score.
+			</p>
+	
+			<p class="text black">
+				The name Simon is a registered trademark owned by Milton-Bradley. Our
+				use of the name and the game is for non-profit educational use only. No
+				part of this code or program should be used outside of that definition.
+			</p>
+		</div>
+	</main>
+
+	<script>
+		includeHTML();
+	</script>
+  </body>
+</html>

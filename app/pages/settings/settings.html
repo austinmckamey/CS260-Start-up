@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+	<script>
+	function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/*loop through a collection of all HTML elements:*/
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+		/*search for elements with a certain atrribute:*/
+		file = elmnt.getAttribute("include-html");
+		if (file) {
+			/*make an HTTP request using the attribute value as the file name:*/
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			if (this.readyState == 4) {
+				if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+				if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+				/*remove the attribute, and call this function once more:*/
+				elmnt.removeAttribute("include-html");
+				includeHTML();
+			}
+			}      
+			xhttp.open("GET", file, true);
+			xhttp.send();
+			/*exit the function:*/
+			return;
+		}
+		}
+	};
+	</script>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>Snake-eats-apple</title>
+    <link rel="stylesheet" href="../../styling/main.css">
   </head>
   <body>
     <header>
-      <h1>Simon<sup>&reg;</sup></h1>
-
-      <nav>
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="play.html">Play</a></li>
-          <li><a href="scores.html">Scores</a></li>
-          <li><a href="about.html">About</a></li>
-        </menu>
-      </nav>
-
-      <hr />
+		<div include-html="../home/home.html"></div>
     </header>
 
     <main>
-      <p>
-        Simon is a repetitive memory game where you follow the demonstrated
-        color sequence until you make a mistake. The longer the sequence you
-        repeat, the greater your score.
-      </p>
-
-      <p>
-        The name Simon is a registered trademark owned by Milton-Bradley. Our
-        use of the name and the game is for non-profit educational use only. No
-        part of this code or program should be used outside of that definition.
-      </p>
+		<div class="content flex-col">
+			<br />
+			<div class="text black">Random Text that tells about the game and me.</div>
+		</div>
     </main>
 
     <footer>
@@ -42,5 +53,9 @@
       <br />
       <a href="https://github.com/austinmckamey/simon">GitHub</a>
     </footer>
+
+	<script>
+		includeHTML();
+	</script>
   </body>
 </html>
