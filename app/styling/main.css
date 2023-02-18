@@ -1,26 +1,33 @@
 :root {
-	--focus: #333533;
-	--white: #87bcde;
-	--trim: #E8F1F2;
+	--focus: #13005A;
+	--secondary: #1C82AD;
+	--trim: #03C988;
 	--red: #cc2d2d;
-	--green: #4CAF50;
+	--green: #03C988;
 }
 
 .text {
 	font-size: 25px;
 }
 
+.medium-text {
+	font-size: 35px;
+}
+
 .large-text {
 	font-size: 80px;
 }
 
+.focus {
+	color: var(--focus);
+}
+
+.secondary {
+	color: var(--secondary)
+}
 
 .trim {
 	color: var(--trim);
-}
-
-.focus {
-	color: var(--focus);
 }
 
 .flex-col {
@@ -36,19 +43,15 @@
 
 /* The side navigation menu */
 .topnav {
-	height: 12%; /* 100% Full-height */
-	width: 100%; /* 0 width - change this with JavaScript */
+	height: 100%; /* 100% Full-height */
+	width: 20%; /* 0 width - change this with JavaScript */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Stay on top */
 	top: 0; /* Stay at the top */
 	left: 0;
-	background-color: var(--trim); /* focus*/
+	background-color: var(--focus); /* focus*/
 	display: flex;
-	flex-direction: row;
-	border-style: solid;
-	border-width: 1px;
-	border-color: var(--trim);
-	border-bottom-color: var(--trim);
+	flex-direction: column;
 }
   
   /* The navigation menu links */
@@ -58,46 +61,45 @@
 }
 
 .topnav p:last-of-type {
-	margin-left: auto;
-	padding: 16px 32px 4px 4px;
+	margin-top: auto;
+	padding: 16px 4px 4px 32px;
 }
 
 .topnav a {
 	font-size: 25px;
-	color: var(--focus);
+	color: var(--secondary);
 	text-decoration: none;
 }
 
 /* When you mouse over the navigation links, change their color */
 .topnav p:hover a{
-	color: var(--trim);
+	color: var(--secondary);
 }
 
 .topnav p:hover {
 	background-color: var(--focus);
-	border-style: solid;
+	border-style: dashed;
 	border-radius: 5px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 	border-color: var(--trim);
 	border-bottom: var(--focus);
-	border-width: 1px;
+	border-width: 3px;
 }
 
 .content {
 	position: absolute;
-	left: 0;
+	right: 0;
 	bottom: 0;
-	width: 100%;
-	height: 88%;
+	width: 80%;
+	height: 100%;
 	background-color: var(--focus);
 }
 
 .login {
 	height: 100%; /* 100% Full-height */
 	width: 100%; /* 0 width - change this with JavaScript */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Stay on top */
+	position: fixed;
 	top: 0; /* Stay at the top */
 	left: 0;
 	background-color: var(--focus); /* focus*/
@@ -136,7 +138,7 @@
 .login button {
 	background-color: var(--red); /* Green */
 	border: none;
-	color: var(--white);
+	color: var(--focus);
 	padding: 10px;
 	margin-top: 5px;
 	margin-left: 5px;
@@ -179,19 +181,20 @@
 
 .position1 {
 	position: absolute;
-	left: 200px;
-	top: 200px;
+	left: 15%;
+	top: 30%;
 }
 
 .position2 {
 	position: absolute;
-	left: 1200px;
-	top: 600px;
+	left: 85%;
+	top: 80%;
 }
 
 .snake-animation1 {
 	position: absolute;
-	left: 0px;
+	left: 0;
+	top: 50%;
 	animation: snake1 11s infinite;
 	animation-timing-function: linear;
 	display: flex;
@@ -204,7 +207,7 @@
 
 .snake-animation2 {
 	position: absolute;
-	left: 300px;
+	left: 20%;
 	animation: snake2 8s infinite;
 	animation-timing-function: linear;
 	display: flex;
@@ -217,7 +220,7 @@
 
 .snake-animation3 {
 	position: absolute;
-	left: 1100px;
+	left: 80%;
 	animation: snake3 10s infinite;
 	animation-timing-function: linear;
 	display: flex;
@@ -232,4 +235,10 @@
 	background-color: black;
 	height: 60%;
 	width: 50%;
+	border-style: dashed;
+	border-width: 3px;
+	border-radius: 5px;
+	border-color: var(--trim);
+	margin-top: auto;
+	margin-bottom: auto;
 }
