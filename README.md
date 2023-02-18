@@ -30,3 +30,5 @@ CSS stuff
 - possibly use tailwind to make it easier
 
 Flex is the best, everything will be responsive to mobile view.
+
+Look into bootstrap for everything, replace buttons and input stuff.
