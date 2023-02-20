@@ -27,8 +27,13 @@ Domain: https://snake-eats-apple.click/
 CSS stuff
 
 - animations!!
-- possibly use tailwind to make it easier
 
 Flex is the best, everything will be responsive to mobile view.
 
 Look into bootstrap for everything, replace buttons and input stuff.
+
+CSS is already mostly implemented, but look into color schemes more.
+
+Focus on storytelling through design.
+
+Do not forget to implement a light mode in settings.
