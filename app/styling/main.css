@@ -1,5 +1,6 @@
 :root {
 	--focus: #13005A;
+	--focus_light: #1d0670;
 	--secondary: #1C82AD;
 	--trim: #03C988;
 	--red: #cc2d2d;
@@ -11,7 +12,7 @@
 }
 
 .medium-text {
-	font-size: 35px;
+	font-size: 30px;
 }
 
 .large-text {
@@ -52,6 +53,10 @@
 	background-color: var(--focus); /* focus*/
 	display: flex;
 	flex-direction: column;
+	border-style: solid;
+	border-color: var(--focus);
+	border-right-color: var(--trim);
+	border-width: 3px;
 }
   
   /* The navigation menu links */
@@ -76,14 +81,15 @@
 	color: var(--secondary);
 }
 
-.topnav p:hover {
-	background-color: var(--focus);
-	border-style: dashed;
+.topnav p:not(:first-child):hover {
+	background-color: var(--focus_light);
+	padding-right: 3px;
+	border-style: solid;
 	border-radius: 5px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	border-color: var(--trim);
-	border-bottom: var(--focus);
+	border-color: var(--focus_light);
+	border-bottom-color: var(--trim);
 	border-width: 3px;
 }
 
@@ -93,7 +99,7 @@
 	bottom: 0;
 	width: 80%;
 	height: 100%;
-	background-color: var(--focus);
+	background-color: var(--focus_light);
 }
 
 .login {
@@ -171,12 +177,14 @@
 	margin-top: 3px;
 	margin-left: 3px;
 	background-color: var(--green);
+	z-index: 1;
 }
 
 .apple {
 	height: 15px;
 	width: 15px;
 	background-color: var(--red);
+	z-index: 1;
 }
 
 .position1 {
