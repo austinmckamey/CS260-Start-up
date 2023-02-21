@@ -127,6 +127,9 @@
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	border-style: solid;
+	border-color: var(--green);
+	border-radius: 5px;
 }
 
 .username {
@@ -157,6 +160,7 @@
 .login button:hover {
 	background-color: var(--green);
 	color: var(--focus);
+	transition: 0.3s;
 }
 
 .header {
@@ -165,10 +169,13 @@
 }
 
 .big-block {
-	height: 36px;
-	width: 36px;
+	height: 40px;
+	width: 40px;
 	margin-top: 5px;
 	background-color: var(--green);
+	border-style: solid;
+	border-color: var(--green);
+	border-radius: 5px;
 }
 
 .block {
