@@ -40,15 +40,47 @@
 		<div include-html="../home/home.html"></div>
     </header>
 
-    <main>
-		<div class="content flex-col">
-			<br />
-			<div class="text secondary">Random Text that tells about the game and me.</div>
-		</div>
+    <main class="content">
+		<ul class="inset flex-col even">
+			<li class="width flex-row start text trim">
+				<label class="switch">
+					<input type="checkbox" class="trim" onclick="changeTheme()">
+					<span class="slider"></span>
+				</label>
+				<div class="pl-12">Hotdog Stand</div>
+			</li>
+			<li class="width flex-row start text trim">
+				<label class="switch">
+					<input type="checkbox" class="trim">
+					<span class="slider"></span>
+				</label>
+				<div class="pl-12">Music</div>
+			</li>
+			<li class="width flex-row start text trim">
+				<label class="switch">
+					<input type="checkbox" class="trim">
+					<span class="slider"></span>
+				</label>
+				<div class="pl-12">Sound</div>
+			</li>
+			<li class="width flex-row start text trim">
+				<label class="switch">
+					<input type="checkbox" class="trim">
+					<span class="slider"></span>
+				</label>
+				<div class="pl-12">Switch</div>
+			</li>
+			<li class="width flex-row start text trim">
+				<label class="switch">
+					<input type="checkbox" class="trim">
+					<span class="slider"></span>
+				</label>
+				<div class="pl-12">Switch</div>
+			</li>
+		</ul>
     </main>
 
     <footer>
-      <hr />
       <span class="text-reset">Austin McKamey</span>
       <br />
       <a href="https://github.com/austinmckamey/simon">GitHub</a>
@@ -56,6 +88,10 @@
 
 	<script>
 		includeHTML();
+		function changeTheme() {
+			var element = document.body;
+			element.classList.toggle("hotdog-mode");
+		}
 	</script>
   </body>
 </html>

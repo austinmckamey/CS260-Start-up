@@ -7,6 +7,15 @@
 	--green: #03C988;
 }
 
+.hotdog-mode {
+	--focus: #ff0000;
+	--focus_light: #ff3f3f;
+	--secondary: #ffd500;
+	--trim: #008726;
+	--red: #ffc642;
+	--green: #693300; 
+}
+
 .text {
 	font-size: 25px;
 }
@@ -42,6 +51,34 @@
 	flex-direction: row;
 }
 
+.even {
+	justify-content: space-evenly;
+}
+
+.between {
+	justify-content: space-between;
+}
+
+.around {
+	justify-content: space-around;
+}
+
+.left {
+	align-content: start;
+}
+
+.width {
+	width: 100%;
+}
+
+.pl-12 {
+	padding-left: 12px;
+}
+
+.p-40 {
+	padding: 40px;
+}
+
 /* The side navigation menu */
 .topnav {
 	height: 100%; /* 100% Full-height */
@@ -53,10 +90,7 @@
 	background-color: var(--focus); /* focus*/
 	display: flex;
 	flex-direction: column;
-	border-style: solid;
-	border-color: var(--focus);
-	border-right-color: var(--trim);
-	border-width: 3px;
+	box-shadow: 0 4px 8px 0 var(--trim), 0 6px 20px 0 var(--trim);
 }
   
   /* The navigation menu links */
@@ -82,15 +116,8 @@
 }
 
 .topnav p:not(:first-child):hover {
-	background-color: var(--focus_light);
 	padding-right: 3px;
-	border-style: solid;
-	border-radius: 5px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	border-color: var(--focus_light);
-	border-bottom-color: var(--trim);
-	border-width: 3px;
+	box-shadow: 0 6px 10px -4px var(--trim), 0 6px 24px -10px var(--trim);
 }
 
 .content {
@@ -100,6 +127,16 @@
 	width: 80%;
 	height: 100%;
 	background-color: var(--focus_light);
+}
+
+.inset {
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+	width: 80%;
+	height: 80%;
+	background-color: var(--focus);
+	box-shadow: 0 4px 8px 0 var(--trim), 0 6px 20px 0 var(--trim);
 }
 
 .login {
@@ -249,12 +286,88 @@
 
 .game {
 	background-color: black;
-	height: 60%;
-	width: 50%;
-	border-style: dashed;
-	border-width: 3px;
-	border-radius: 5px;
-	border-color: var(--trim);
+	height: 80%;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 var(--trim), 0 6px 20px 0 var(--trim);
 	margin-top: auto;
 	margin-bottom: auto;
+}
+
+.grid {
+	width: 90%;
+	color: var(--trim);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.784), 0 6px 20px 0 rgba(0, 0, 0, 0.743);
+}
+
+.grid th {
+	border-style: solid;
+	border-color: var(--trim);
+	border-width: 1px;
+}
+
+.grid td {
+	border-style: solid;
+	border-color: var(--trim);
+	border-width: 1px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	float:right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--secondary);
+	-webkit-transition: .4s;
+	transition: .4s;
+	box-shadow: 0 2px 6px 0 var(--trim), 0 3px 10px 0 var(--trim);
+}
+  
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--focus);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+  
+input.trim:checked + .slider {
+	background-color: var(--trim)
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
 }
