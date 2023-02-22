@@ -71,14 +71,6 @@
 	width: 100%;
 }
 
-.pl-12 {
-	padding-left: 12px;
-}
-
-.p-40 {
-	padding: 40px;
-}
-
 /* The side navigation menu */
 .topnav {
 	height: 100%; /* 100% Full-height */
@@ -314,10 +306,9 @@
 /* The switch - the box around the slider */
 .switch {
 	position: relative;
-	display: inline-block;
 	width: 60px;
 	height: 34px;
-	float:right;
+	float: right;
 }
 
 /* Hide default HTML checkbox */

@@ -41,50 +41,46 @@
     </header>
 
     <main class="content">
-		<ul class="inset flex-col even">
-			<li class="width flex-row start text trim">
-				<label class="switch">
-					<input type="checkbox" class="trim" onclick="changeTheme()">
-					<span class="slider"></span>
-				</label>
-				<div class="pl-12">Hotdog Stand</div>
-			</li>
-			<li class="width flex-row start text trim">
-				<label class="switch">
-					<input type="checkbox" class="trim">
-					<span class="slider"></span>
-				</label>
-				<div class="pl-12">Music</div>
-			</li>
-			<li class="width flex-row start text trim">
-				<label class="switch">
-					<input type="checkbox" class="trim">
-					<span class="slider"></span>
-				</label>
-				<div class="pl-12">Sound</div>
-			</li>
-			<li class="width flex-row start text trim">
-				<label class="switch">
-					<input type="checkbox" class="trim">
-					<span class="slider"></span>
-				</label>
-				<div class="pl-12">Switch</div>
-			</li>
-			<li class="width flex-row start text trim">
-				<label class="switch">
-					<input type="checkbox" class="trim">
-					<span class="slider"></span>
-				</label>
-				<div class="pl-12">Switch</div>
-			</li>
-		</ul>
+		<div class="inset flex-col">
+			<ul class="pt-4 width">
+				<li class="flex-row start text trim">
+					<label class="switch">
+						<input type="checkbox" class="trim">
+						<span class="slider"></span>
+					</label>
+					<div class="px-3">Music</div>
+				</li>
+				<li class="pt-3 flex-row start text trim">
+					<label class="switch">
+						<input type="checkbox" class="trim">
+						<span class="slider"></span>
+					</label>
+					<div class="px-3">Sound</div>
+				</li>
+				<li class="pt-3 flex-row start text trim">
+					<label class="switch">
+						<input type="checkbox" class="trim">
+						<span class="slider"></span>
+					</label>
+					<div class="px-3">Switch</div>
+				</li>
+				<li class="pt-3 flex-row start text trim">
+					<label class="switch">
+						<input type="checkbox" class="trim">
+						<span class="slider"></span>
+					</label>
+					<div class="px-3">Switch</div>
+				</li>
+				<li class="pt-3 flex-row start text trim">
+					<label class="switch">
+						<input type="checkbox" class="trim" onclick="changeTheme()">
+						<span class="slider"></span>
+					</label>
+					<div class="px-3">Hotdog Stand</div>
+				</li>
+			</ul>
+		</div>
     </main>
-
-    <footer>
-      <span class="text-reset">Austin McKamey</span>
-      <br />
-      <a href="https://github.com/austinmckamey/simon">GitHub</a>
-    </footer>
 
 	<script>
 		includeHTML();
