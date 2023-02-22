@@ -20,15 +20,17 @@ Command to ssh: ssh -i [key_pair_file] ubuntu@3.143.255.215
 
 Domain: https://snake-eats-apple.click/
 
+I want to add music and sound effects, need this!!
 <audio controls loop src="https://github.com/webprogramming260/.github/blob/main/profile/html/media/htmlAudio.mp3?raw=true"></audio>
 
+Optionally add a howto video just for fun.
 <video controls width="300"> <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" /></video>
 
 CSS stuff
 
 - animations!!
 
-Flex is the best, everything will be responsive to mobile view.
+Flex is the best, everything will be responsive to mobile view. Mobile view is not implemented yet.
 
 Look into bootstrap for everything, replace buttons and input stuff.
 
@@ -36,4 +38,4 @@ CSS is already mostly implemented, but look into color schemes more.
 
 Focus on storytelling through design.
 
-Do not forget to implement a light mode in settings.
+Do not forget to implement a light mode in settings. Hotdog stand is an option...
