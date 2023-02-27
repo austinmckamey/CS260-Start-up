@@ -39,3 +39,7 @@ CSS is already mostly implemented, but look into color schemes more.
 Focus on storytelling through design.
 
 Do not forget to implement a light mode in settings. Hotdog stand is an option...
+
+JavaScript stuff
+- handle errors correctly
+- see if there's anywhere a rest or spread can work
