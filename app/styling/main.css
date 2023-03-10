@@ -193,6 +193,52 @@
 	cursor: pointer;
 }
 
+.play-buttons {
+	width: 600px;
+}
+
+.play-buttons button {
+	background-color: var(--red);
+	border: none;
+	color: var(--focus);
+	padding: 5px;
+	padding-left: 50px;
+	margin-top: 30px;
+	margin-bottom: auto;
+	margin-left: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	border-style: solid;
+	border-color: var(--red);
+	border-radius: 5px;
+}
+
+.play-buttons button:hover {
+	background-color: var(--green);
+	color: var(--focus);
+	transition: 0.3s;
+	cursor: pointer;
+	border-style: solid;
+	border-color: var(--green);
+	border-radius: 5px;
+}
+
+.play-buttons p {
+	border: none;
+	color: var(--green);
+	padding: 5px;
+	padding-right: 50px;
+	margin-top: 30px;
+	margin-bottom: auto;
+	margin-left: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+}
+
 .header {
 	display: flex;
 	justify-content: center;
@@ -278,11 +324,10 @@
 
 .game {
 	background-color: black;
-	height: 80%;
-	width: 80%;
+	height: fit-content;
+	width: fit-content;
 	box-shadow: 0 4px 8px 0 var(--trim), 0 6px 20px 0 var(--trim);
-	margin-top: auto;
-	margin-bottom: auto;
+	margin-top: 50px;
 }
 
 .grid {
@@ -361,4 +406,66 @@ input:checked + .slider:before {
 
 .slider.round:before {
 	border-radius: 50%;
+}
+
+.alertBox {
+    position: fixed;
+	width: fit-content;
+	height: fit-content;
+    padding: 1rem, 1rem;
+    margin-top: 5px;
+	margin-left: 5px;
+    color: inherit;
+    background-color: var(--red);
+	border-style: solid;
+	border-radius: 5px;
+	display: none;
+}
+
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}	
+}
+
+.alertMsg {
+	color: var(--focus);
+	padding-left: 10px;
+	padding-right: 30px;
+	padding-top: 10px;
+}
+
+.cancel::before {
+	content: "\2715";
+}
+
+.cancel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: var(--focus);
+	padding-right: 10px;
+}
+
+.failure {
+	opacity: 0;
+	position: fixed;
+	top: 40%;
+	left: 45%;
+	color: var(--red);
+	font-size: 48px;
+}
+
+@keyframes fail {
+	0% {opacity: 1;}
+	10% {opacity: 1;}
+	20% {opacity: 0;}
+	30% {opacity: 0;}
+	40% {opacity: 1;}
+	50% {opacity: 1;}
+	60% {opacity: 0;}
+	70% {opacity: 0;}
+	80% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {opacity: 1;}	
 }
