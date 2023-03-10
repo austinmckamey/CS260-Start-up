@@ -451,7 +451,7 @@ input:checked + .slider:before {
 	opacity: 0;
 	position: fixed;
 	top: 40%;
-	left: 45%;
+	left: 50%;
 	color: var(--red);
 	font-size: 48px;
 }
