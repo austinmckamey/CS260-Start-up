@@ -43,3 +43,21 @@ Do not forget to implement a light mode in settings. Hotdog stand is an option..
 JavaScript stuff
 - handle errors correctly
 - see if there's anywhere a rest or spread can work
+
+```fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'test title',
+    body: 'test body',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((jsonResponse) => {
+    console.log(jsonResponse);
+  });```
+  
+^ Remove method, body, and headers for simple fetch call.
