@@ -44,7 +44,8 @@ JavaScript stuff
 - handle errors correctly
 - see if there's anywhere a rest or spread can work
 
-```fetch('https://jsonplaceholder.typicode.com/posts', {
+```
+fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
   body: JSON.stringify({
     title: 'test title',
@@ -58,6 +59,7 @@ JavaScript stuff
   .then((response) => response.json())
   .then((jsonResponse) => {
     console.log(jsonResponse);
-  });```
+  });
+```
   
 ^ Remove method, body, and headers for simple fetch call.
