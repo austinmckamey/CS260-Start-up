@@ -63,3 +63,10 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 ```
   
 ^ Remove method, body, and headers for simple fetch call.
+
+Steps to change to service:
+- move everything into public folder aside from README, deployFiles, & gitignore
+- npm init and npm install express
+- create index.js file
+- add code for endpoints
+- add functions to other js files
