@@ -70,3 +70,8 @@ Steps to change to service:
 - create index.js file
 - add code for endpoints
 - add functions to other js files
+
+Database:
+- ssh into prod server
+- change environment variables
+- restart pm2
