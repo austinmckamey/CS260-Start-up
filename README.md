@@ -75,3 +75,10 @@ Database:
 - ssh into prod server
 - change environment variables
 - restart pm2
+
+Authentication:
+- add credentials to database
+- hash password!!
+- store cookie for authenticated user
+- secure, httpOnly, sameSite
+- endpoints design
