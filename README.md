@@ -82,3 +82,9 @@ Authentication:
 - store cookie for authenticated user
 - secure, httpOnly, sameSite
 - endpoints design
+
+WebSocket:
+- create "new WebSocket('IP');
+- socket.send();
+- socket.onmessage = () => {}
+- don't forget to import WebSocket
