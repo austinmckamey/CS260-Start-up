@@ -43,3 +43,51 @@ Do not forget to implement a light mode in settings. Hotdog stand is an option..
 JavaScript stuff
 - handle errors correctly
 - see if there's anywhere a rest or spread can work
+
+```
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'test title',
+    body: 'test body',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((jsonResponse) => {
+    console.log(jsonResponse);
+  });
+```
+  
+^ Remove method, body, and headers for simple fetch call.
+
+Steps to change to service:
+- move everything into public folder aside from README, deployFiles, & gitignore
+- npm init and npm install express
+- create index.js file
+- add code for endpoints
+- add functions to other js files
+
+Database:
+- ssh into prod server
+- change environment variables
+- restart pm2
+
+Authentication:
+- add credentials to database
+- hash password!!
+- store cookie for authenticated user
+- secure, httpOnly, sameSite
+- endpoints design
+
+WebSocket:
+- create "new WebSocket('IP');
+- socket.send();
+- socket.onmessage = () => {}
+- don't forget to import WebSocket
+
+React:
+- child and parent components are reactive to each other
