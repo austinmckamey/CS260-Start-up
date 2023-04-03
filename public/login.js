@@ -99,6 +99,26 @@ function login() {
 	}
 }
 
+function create() {
+	const name = document.querySelector("#name").value;
+	const password = document.querySelector("#password").value;
+
+	if (name && password) {
+  		localStorage.setItem("userName", name);
+		localStorage.setItem("theme", "normal");
+		createUser();
+	} else {
+		document.querySelector("#alertMsg").innerHTML = produceMessage(name, password);
+		const alertBox = document.querySelector("#alertBox");
+		alertBox.style.display = "block";
+		alertBox.style.animation = "fadeOut 5s";
+		setTimeout(() => {
+			alertBox.style.display = "none";
+			alertBox.style.animation = "";
+		}, 5000); 
+	}
+}
+
 function produceMessage(name, password) {
 	if (!name && !password) {
 		return "Username and password must be specified!";
