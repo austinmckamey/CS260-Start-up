@@ -1,3 +1,9 @@
+function logout() {
+	fetch(`/api/auth/logout`, {
+		method: 'delete',
+	}).then(() => (window.location.href = '/'));
+}
+
 function includeHTML() {
 	var z, i, elmnt, file, xhttp;
 	/*loop through a collection of all HTML elements:*/

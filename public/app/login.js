@@ -53,12 +53,6 @@
 	window.location.href = 'play.html';
   }
   
-  function logout() {
-	fetch(`/api/auth/logout`, {
-	  method: 'delete',
-	}).then(() => (window.location.href = '/'));
-  }
-  
   async function getUser(email) {
 	let scores = [];
 	// See if we have a user with the given email.
