@@ -1,23 +1,3 @@
-(async () => {
-	let authenticated = false;
-	const userName = localStorage.getItem('userName');
-	if (userName) {
-	  const nameEl = document.querySelector('#name');
-	  nameEl.value = userName;
-	  const user = await getUser(nameEl.value);
-	  authenticated = user?.authenticated;
-	}
-  
-	if (authenticated) {
-	  document.querySelector('#playerName').textContent = userName;
-	  setDisplay('loginControls', 'none');
-	  setDisplay('playControls', 'block');
-	} else {
-	  setDisplay('loginControls', 'block');
-	  setDisplay('playControls', 'none');
-	}
-  })();
-  
   async function loginUser() {
 	loginOrCreate(`/api/auth/login`);
   }
@@ -40,7 +20,7 @@
   
 	if (response?.status === 200) {
 	  localStorage.setItem('userName', userName);
-	  location.href = "app/pages/play/play.html";
+	  location.href = "play.html";
 	} else {
 	  const modalEl = document.querySelector('#msgModal');
 	  modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
@@ -106,7 +86,7 @@ function login() {
 	if (name && password) {
   		localStorage.setItem("userName", name);
 		localStorage.setItem("theme", "normal");
-		createUser();
+		loginUser();
 	} else {
 		document.querySelector("#alertMsg").innerHTML = produceMessage(name, password);
 		const alertBox = document.querySelector("#alertBox");

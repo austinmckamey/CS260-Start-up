@@ -1,7 +1,7 @@
 function logout() {
 	fetch(`/api/auth/logout`, {
 		method: 'delete',
-	}).then(() => (window.location.href = '/'));
+	}).then(() => (location.href = 'index.html'));
 }
 
 function includeHTML() {

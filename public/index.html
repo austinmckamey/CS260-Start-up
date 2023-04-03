@@ -13,7 +13,7 @@
 	/>
   </head>
   <body>
-	<div include-html="app/styling/animation.html"></div>
+	<div include-html="animation.html"></div>
     <div class="login flex-col">
       <h1 class="header large-text secondary">Snake-eats-apple.</h1>
       <div class="text secondary flex-col">Login to play
@@ -22,8 +22,9 @@
 			<div class="big-block"></div>
 			<div class="flex-row">
 				<input class="no-outline" :focus autocomplete="off" type="password" id="password" placeholder="Password" />
-				<button type="button" class="btn submit" onclick="login()">Login</button>
+				<button type="button" class="btn submit log" onclick="login()">Login</button>
 			</div>
+			<button type="button" class="btn submit" onclick="create()">Create</button>
 		</form>
 	  </div>
     </div>

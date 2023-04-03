@@ -174,7 +174,7 @@ function updateScore() {
 }
 
 async function saveScore(score) {
-    const userName = "Austin";
+    const userName = localStorage.getItem('userName');
     const date = new Date().toLocaleDateString();
     const newScore = { name: userName, score: score, date: date };
 
