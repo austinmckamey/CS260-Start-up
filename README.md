@@ -88,3 +88,6 @@ WebSocket:
 - socket.send();
 - socket.onmessage = () => {}
 - don't forget to import WebSocket
+
+React:
+- child and parent components are reactive to each other
