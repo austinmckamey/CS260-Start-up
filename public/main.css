@@ -27,6 +27,15 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.784), 0 6px 20px 0 rgba(0, 0, 0, 0.743);
 }
 
+.players {
+	position: fixed;
+	right: 0;
+	top: 0;
+	color: #03C988;
+	z-index: 10;
+	padding: 10px;
+}
+
 .padding-bottom {
 	padding-bottom: 50px;
 }
