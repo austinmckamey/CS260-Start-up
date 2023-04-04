@@ -194,7 +194,7 @@ async function saveScore(score) {
 		// Store what the service gave us as the high scores
 		const scores = await response.json();
 		localStorage.setItem('scores', JSON.stringify(scores));
-		broadcastEvent(userName, GameEndEvent, {});
+		broadcastEvent(userName, GameEndEvent, score);
     } catch {
 		// If there was an error then just track scores locally
 		this.updateScoresLocal(newScore);
@@ -234,17 +234,17 @@ function configureWebSocket() {
 	const protocol = location.protocol === 'http:' ? 'ws' : 'wss';
 	this.socket = new WebSocket(`${protocol}://${location.host}/ws`);
 	this.socket.onopen = (event) => {
-		this.displayMsg('system', 'game', 'connected');
+		displayMsg('system', 'game', 'connected');
 	};
 	this.socket.onclose = (event) => {
-		this.displayMsg('system', 'game', 'disconnected');
+		displayMsg('system', 'game', 'disconnected');
 	};
 	this.socket.onmessage = async (event) => {
 		const msg = JSON.parse(await event.data.text());
 		if (msg.type === GameEndEvent) {
-		this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
+		displayMsg('player', msg.from, `scored ${msg.value.score}`);
 		} else if (msg.type === GameStartEvent) {
-		this.displayMsg('player', msg.from, `started a new game`);
+		displayMsg('player', msg.from, `started a new game`);
 		}
 	};
 }
@@ -263,5 +263,8 @@ function broadcastEvent(from, type, value) {
 	};
 	this.socket.send(JSON.stringify(event));
 }
+
+const playerNameEl = document.querySelector('.player-name');
+playerNameEl.textContent = localStorage.getItem('userName');
 
 configureWebSocket();

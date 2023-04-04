@@ -40,6 +40,10 @@
 	padding-bottom: 50px;
 }
 
+.small-text {
+	font-size: 20px;
+}
+
 .text {
 	font-size: 25px;
 }
