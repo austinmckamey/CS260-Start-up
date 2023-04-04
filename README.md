@@ -93,20 +93,20 @@ React:
 - child and parent components are reactive to each other
 
 Conver to React steps:
-Reorganize files
-Create template React application. Run npx create-react-app template-react. This creates a new directory named template-react that contains the basic configuration and template React application code.
-Clean up template code
-Uninstall and NPM packages you won't use (e.g. stats, test)
-Delete the unnecessary create-react-app files (e.g. images)
-Rename js JSX files have jsx extension
-Update manifest.json to represent Startup
-Move template files to Startup
-Populate App.jsx
-Create view components
-Create the router
-Convert to React components
-Convert to React Bootstrap
-Set up to debug
-Refactor play.jsx into snakeGame.jsx, snakeButton.jsx, and players.jsx
-Refactor components to take advantage of React specific functionality and to create sub-components
-Move webSocket code from play.jsx to gameNotifier.js
+- Reorganize files
+- Create template React application. Run npx create-react-app template-react. This creates a new directory named template-react that contains the basic - - configuration and template React application code.
+- Clean up template code
+- Uninstall and NPM packages you won't use (e.g. stats, test)
+- Delete the unnecessary create-react-app files (e.g. images)
+- Rename js JSX files have jsx extension
+- Update manifest.json to represent Startup
+- Move template files to Startup
+- Populate App.jsx
+- Create view components
+- Create the router
+- Convert to React components
+- Convert to React Bootstrap
+- Set up to debug
+- Refactor play.jsx into snakeGame.jsx, snakeButton.jsx, and players.jsx
+- Refactor components to take advantage of React specific functionality and to create sub-components
+- Move webSocket code from play.jsx to gameNotifier.js
