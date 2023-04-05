@@ -110,3 +110,11 @@ Conver to React steps:
 - Refactor play.jsx into snakeGame.jsx, snakeButton.jsx, and players.jsx
 - Refactor components to take advantage of React specific functionality and to create sub-components
 - Move webSocket code from play.jsx to gameNotifier.js
+
+Sound Voices:
+- Christoper Lee
+- Patrick Star
+- SpongeBob SquarePants
+- Papa Smurf
+- Morgan Freeman
+- Mario
